@@ -23,7 +23,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Check out the repo
-        uses: aminedev124/githubaction@main
-      
-      - run: echo 'Hello World!'
+      - name: Execute SSH commmands on remote server
+        uses: actions/checkout@v1
+        with:
+          hosts: 'ec2-user@ec2-18-236-178-106.us-west-2.compute.amazonaws.com'
+          privateKey: ${{ secrets.PRIVATE_KEY }}
+          command: ls -lah
