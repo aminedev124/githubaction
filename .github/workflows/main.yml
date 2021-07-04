@@ -24,7 +24,7 @@ jobs:
     steps:
      - name: Create SSH key
        run: |
-          mkdir -p ~/amine/
+          mkdir -p ~/.ssh/
        shell: bash
        env:
           SSH_KNOWN_HOSTS: 'ec2-18-118-115-218.us-east-2.compute.amazonaws.com'   
