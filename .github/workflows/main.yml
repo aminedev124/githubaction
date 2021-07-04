@@ -25,9 +25,10 @@ jobs:
       - uses: actions/checkout@v1
       - name: Push to server
         uses: JimCronqvist/action-ssh@master
+        env:
+          NAME: "ec2-user"
         with:
-          host: 'ec2-18-118-115-218.us-east-2.compute.amazonaws.com'
-          username: ec2-user
+          hosts: 'ec2-18-118-115-218.us-east-2.compute.amazonaws.com' 
           privateKey: 'AAABAFSE9uJBrYuvG4pl/wH/SW7vinfkxO9289ACS/J0fa+x2dHsD2hTAU22ETGU7zinzUwDwXG8xFdhS1Y2On7ugnaaj9M6kVRu4mqlDoP9m2B56csE5LTAVCNljqHKcTvyuJAAUzeq39IZgASIElWPieJERVMwpCIffSJFM89Nz0vQIoytcNzGuWNVXSupWaIWWxVHE9DhZWUSwgHJiecLai2yF01IQh5zXWrUxhfIKVEOdtFOEVptouFBl5vQMVQWRqjew/5dkWbhWo6H/4Ff8K/ptF7ho5drQNnQkKr/9m4RNzGKDD7CDpqP+kDyQChuIHngUJZ+aQh2OOw1oZBfOQEAAACBAMu9banTo5mMqKLMB+/wuftX6Hg+cbngRxS2OGQgURqdUJM3X8NZEqEZYmskoRjsiGLzRp7Ye0GzmHKpjFam3YV+/nVuxMESzLGFfQZ/B4yPMajS6FtSV/OQ61+6Ra7J0sCOqiYLnKn4WjdHZODlDNiNrz9UR64IVdhCYsWub0OBAAAAgQDDNr4xBUY1R1gfbylU0cA9xQjuzMes9k13G8AIuLib9yahu+uaGO7VxrhgS8GFR24XG2m+pr+mWl0CKj7EUU5yA0kWv1ODC99+xJbMiWWTFk18acWwrTznMRwG0ogFxJuVKuWWy/A03pm0v6wRLleTeuEQ8DudLQ89y6ReiIElZwAAAIAfz2R43SqRNDRCgtCM3ZMOXXenA38Yxd2KsUVMNkBSS3XMHKLM824pgO5J/CirSxE3Z9YweA7Kq5Rb2UzQA6mj6nUZbxvDNEzFH8U+ugMgmVOAyXDZJCJ3WrzNqO9MRgnTbI3YPLxB7xDaiZHAZEJiNEcOR/aoytPFSrJffKbaWw=='
           command: mkdir /test
         
