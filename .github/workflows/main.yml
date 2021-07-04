@@ -28,6 +28,7 @@ jobs:
         with:
           hosts: 'ec2-18-118-115-218.us-east-2.compute.amazonaws.com'
           privateKey: ${{ secrets.PRIVATE_KEY }}
+          username: 'ec2-user'
           command: mkdir /amine
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       
