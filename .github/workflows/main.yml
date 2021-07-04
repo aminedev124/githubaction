@@ -29,7 +29,8 @@ jobs:
           command: ls -a
           host: ${{ secrets.HOST }}
           username: garygrossgarten
-          Key: ${{ secrets.KEY}}
+          privateKey: ${{ secrets.PRIVATE_KEY}}
+        
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       
