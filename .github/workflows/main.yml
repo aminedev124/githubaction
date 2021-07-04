@@ -24,6 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check out the repo
-        uses: actions/checkout@v1
+        uses: aminedev124/githubaction@main
       
       - run: echo 'Hello World!'
