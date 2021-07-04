@@ -3,7 +3,12 @@
 name: CI155
 
 # Controls when the workflow will run
-on: [push]
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,10 +22,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     - uses: actions/checkout@v1
-     - name: Create SSH key
-       uses:  aminedev124/githubaction@main
-       with:
+      - uses: actions/checkout@v1
+      - name: Push to server
+        uses: appleboy/ssh-action@main
+        with:
           hosts: 'ec2-18-118-115-218.us-east-2.compute.amazonaws.com'
           privateKey: ${{ secrets.PRIVATE_KEY }}
           command: mkdir /amine
