@@ -28,8 +28,8 @@ jobs:
         with:
           
           host: 'ec2-18-118-115-218.us-east-2.compute.amazonaws.com'
-          username: garygrossgarten
-          privateKey: ${{ secrets.PRIVATE_KEY}}
+          username: ec2-user
+          privateKey: ${{ secrets.PRIVATE_KEY }}
         
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
