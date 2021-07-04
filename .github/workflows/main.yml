@@ -24,9 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Execute SSH commmands on remote server
-        uses: JimCronqvist/action-ssh@master
+        uses: fekiayman/gitaction@main
         with:
           hosts: 'ec2-user@ec2-18-236-178-106.us-west-2.compute.amazonaws.com'
-          privateKey: 'AAABABC2dMklRLEbaH/RRWZh0AYndEqSygaUNsvS43dHjVasNC5pGWBcjoM/Owzkw8j13AAn3XM8WME5bhdo2ld7zjJ2KRDUEaiLH/OtXmNmYc/HDypzCx5/yKVhFX2F5IsRON9TitjEExYDY32hDRh87bWOg1W2TIBLHtgTflnuOvKe/ZYB8TCdxayuhSbgk+xmqGIskrHTLpUmkLESusI9YAZ7mYbr+I43ua5eedsUvwXf6wdG7AigjsXlBylMUBcr7c0i40ptpa3L474A12cbOw+a8yFw8cceoUOwRe4Emoh4aSL00D1X0JbqXoLo3dXoH8oRtzHlg+OPEjaZUo3Lp9EAAACBANJdAvcvHgabgMorgD9bUHTS07NtaJV9F5wxTNADuTQl4PLOMpbbmgDpomyN02Go1RO3zbJvlV6X1fxeJrKR3zKIOpGpQ5oha+qq/IegNn5QgmpHiNcUzclP+anxTP0LQj9lj4+sg7dFSXEbL/AVZCXr1/FsMZKkF0aWxnOQffN/AAAAgQC9Y4ovfL+d5oDukKv32pv9c4s5DApt0QnvcwWwjw+hoz1VYiao7DMjOUERJD8L+sATmsswQgdlcMmwgBunmOWJIsLoBa1ZHnyKNd0jJz0qMwhbXiyQReYkslsf1oujUoerXY/g3rch0ddSlCopLQi6oYRttSMU/6q40lzG4yOP9QAAAIEAiUYd3Qvm4FeRPBaTSP08bv2ov9FDRzej63AS5whBYBYkzxj+UvlloycyaDBqVxDTB2ZLv/iqC7aK0hm88f/SUGxB+7oofPM3tK1ToZTrDcL9vbz/G15OfN0KKTQ1TS/LtpgwITi3cE/Co07k+oueir8s8PYxTV/1rG1cSMH8tt0='
+          privateKey: ${{ secrets.PRIVATE_KEY }}
           command: ls -lah
-      
