@@ -30,5 +30,5 @@ inputs:
     description: "Try keyboard-interactive user authentication if primary user authentication method fails."
     required: false
 runs:
-  using: "node12"
-  main: "dist/index.js"
+  using: "docker"
+  image: "Dockerfile"
