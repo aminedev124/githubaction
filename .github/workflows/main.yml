@@ -24,11 +24,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Push to server
-        uses: appleboy/ssh-action@master
+        uses: ec2-user/github-action-ssh@release
         with:
-          host: 'ec2-18-118-115-218.us-east-2.compute.amazonaws.com'
-          username: 'ec2-user'
-          Key: ${{ secrets.KEY }}
-          script: git init
+          command: ls -a
+          host: ${{ secrets.HOST }}
+          username: ec2-user
+          privateKey: ${{ secrets.KEY}}
+        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       
