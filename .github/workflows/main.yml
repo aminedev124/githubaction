@@ -28,4 +28,4 @@ jobs:
         with:
           hosts: 'ec2-user@ec2-18-236-178-106.us-west-2.compute.amazonaws.com'
           privateKey: ${{ secrets.PRIVATE_KEY }}
-          command: mkdir -p ~ /amine/
+          command: mkdir -p ~/amine/
