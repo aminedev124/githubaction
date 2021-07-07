@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Push to server
-        uses: aminedev124/githubaction@master
+        uses: aminedev124/githubaction@main
         env:
           NAME: "ec2-user"
         with:
